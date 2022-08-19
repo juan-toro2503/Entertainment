@@ -1,10 +1,12 @@
 //dependencies
 const express = require('express');
 
+//database
+require('./database/db')
 
 //variables
 const app = express();
-const port = 3002;
+const port = 3003;
 const routerApi = require('./routes')
 //settings
 app.use(express.json());

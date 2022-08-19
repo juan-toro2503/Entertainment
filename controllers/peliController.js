@@ -1,6 +1,13 @@
+const peliServices = require('../services/peliServices')
+
+const serviPeliculas = new peliServices();
+
 class peliController {
     getPeliculas(req,res){
-        res.send("hello controller")
+        let peliculas = serviPeliculas.getPeliculas()
+        peliculas.then((resolve)=>{
+          res.json(resolve)
+        })
     }
 
 }
