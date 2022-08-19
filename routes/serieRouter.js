@@ -7,6 +7,7 @@ const controllerSerie = new serieController();
 
 const serieRouter = express.Router();
 
-serieRouter.get("/getSeries",controllerSerie.getSeries)
+serieRouter.get("/getSeries",controllerSerie.getSeries);
+serieRouter.post("/saveSerie",controllerSerie.saveSerie);
 
 module.exports = serieRouter;
