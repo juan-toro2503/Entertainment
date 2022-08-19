@@ -1,13 +1,16 @@
 //dependencies
 const express = require('express');
 const cors = require('cors')
-
+require('dotenv').config()
 //database
 require('./database/db')
 
+//enviroment variables
+
+
 //variables
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 3003;
 const routerApi = require('./routes')
 //settings
 app.use(express.json());
