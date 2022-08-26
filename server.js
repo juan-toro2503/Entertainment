@@ -5,14 +5,17 @@ require('dotenv').config()
 //database
 require('./database/db')
 
-//enviroment variables
-
 
 //variables
 const app = express();
+
+const routerApi = require('./routes');
+
+//enviroment variables
 const port = process.env.PORT || 3003;
-const routerApi = require('./routes')
+
 //settings
+app.use(express.static("public"));
 app.use(express.json());
 
 
