@@ -1,0 +1,233 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+    
+}
+body{
+    background-color: rgb(6, 43, 56);
+}
+/* menu de navegacion */
+.nav{
+    width: 100%;
+    height: 100px;;
+    background-color: rgb(17, 39, 54);
+    display: flex;
+    
+    padding:5px;
+    border: 2px solid rgb(191, 255, 0);
+    box-shadow: 5px 5px 18px 5px rgba(191,255,0,0.73) ;
+    border-radius:10px;
+}
+.nav-ul{
+    width: 85%;
+    height:80px;
+    
+    margin-right: 10px;
+    padding:10px;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-ul a{
+    text-decoration: none;
+}
+.nav-ul-li{
+    width:auto;
+    font-size: 26px;
+    height:45px;
+    
+    background-color:rgb(17, 19, 53);
+    padding:4px;
+    border-radius: 5px;;
+    text-align: center;
+    color: rgb(69, 244, 250);
+    
+}
+.nav-buscar{
+    width:200px;;
+    height:30px;
+    font-size: 17px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius:5px;
+    color: rgb(185, 252, 0);
+}
+.logo-menu{
+    font-size:28px;
+    margin-right: 4px;
+    margin-bottom:-8px; ;
+    
+    
+}
+.nav-ul-li:hover{
+    color:rgb(191, 255, 0);
+    border-bottom:3px solid rgb(191, 255, 0);
+    
+
+}
+.nav-logo{
+    width: 14%;
+    height:80px;
+    
+}
+.nav-logo img{
+    width:100%;
+    height:100%;
+    border-radius:5px;
+    border:1px solid rgb(0, 255, 213);
+    box-shadow: 0px 5px 18px 5px rgba(0, 255, 234, 0.73)
+}
+/* contendedor  peliculas */
+.show-movies{
+    padding:0px;
+    margin: 1%;
+    margin-top:70px;
+    width: auto;
+    display:flex;
+    flex-wrap: wrap;
+    height: auto;
+    background-color:rgb(1, 47, 65);
+    border: 6px solid rgb(255, 191, 0);
+    border-radius:15px;
+    box-shadow: 0px 5px 18px 5px rgba(255, 174, 0, 0.73) ;
+    
+}
+.movies-title{
+    background-color:rgb(191, 255, 0);
+    border:2px solid ;
+    border-radius:5px;
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    margin-top:-25px;
+    margin-left: 50px;
+}
+/* item de peliculas-libros-series */
+.container-item{
+    margin: 30px;
+    margin-left:13px;
+    margin-right:13px;
+    background-color: rgb(1, 47, 65);
+    border-radius: 11px;
+    transition: all 0.7s;
+    width:190px;
+    height:290px;
+    background-color: aqua;
+    display: block;
+    overflow: hidden;
+    
+
+}
+.img-item{
+    width:100%;
+    height:100%;
+    background-color:rgba(255, 0, 0, 0.391);
+    position:relative;
+   
+    
+}
+
+
+.description-item{
+    width:100%;
+    height:102%;
+    padding:10px;
+    color: rgb(217, 255, 0);
+    background-color:rgba(3, 3, 3, 0.866);
+    transition: all .7s;
+    
+   
+    
+}
+.description-item h3 {
+    font-size:20px;
+
+}
+.description-item h4 {
+    font-size:18px;
+
+}
+
+.container-item:hover .description-item{
+    transform: translate(0,-100%);
+   
+    
+}
+
+
+
+
+
+
+
+/* contenedor series */
+.show-series{
+    padding:0px;
+    margin: 1%;
+    margin-top:70px;
+    width: 98%;
+    display:flex;
+    flex-wrap: wrap;
+    height: auto;
+    background-color:rgb(1, 47, 65);
+    border: 6px solid rgb(255, 0, 76);
+    border-radius:15px;
+    box-shadow: 0px 5px 18px 5px rgba(255,0,76,0.73) ;
+    
+
+}
+/* contenedor libros */
+.show-books{
+    padding:0px;
+    margin: 1%;
+    margin-top:70px;
+    width: 98%;
+    display:flex;
+    flex-wrap: wrap;
+    height: auto;
+    background-color:rgb(1, 47, 65);
+    border: 6px solid rgb(0, 255, 204);
+    border-radius:15px;
+    box-shadow: 0px 5px 18px 5px rgba(0,255,204,0.73) ;
+}
+
+/* footer */
+.footer{
+    
+    margin-top:80px;
+    
+    width:100%;
+    height:300px;
+    background-color: rgb(6, 43, 56);
+    padding: 20px;
+    
+    border-top: 2px solid rgb(191, 255, 0);
+    box-shadow: 0px -15px 18px 0px rgba(255, 174, 0, 0.73) ;
+}
+.logo-footer{
+    margin-left: 45%;
+}
+.ul-developers{
+    margin-top: 20px;;
+    margin-left:15% ;
+   display: flex;
+   justify-content: center;
+    width:70%;
+    height:160px;
+    
+}
+
+.ul-developers li  h1{
+    list-style-position: outside;
+  list-style-type: none;
+    font-size:18px;
+    margin-right: 25px;
+    border-left: 1px solid;
+   
+}
+.ul-developers li  {
+  list-style-type: none;
+  color: rgb(221, 125, 0);
+    
+}
