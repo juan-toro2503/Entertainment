@@ -165,9 +165,10 @@ function agregarLibros(){
         for(peli of data){
             peliculas.push(peli);
             
-            /* for (var i in peli){
-                console.log(peli[i])
-            } */
+             /* for (var i in peli){
+               
+            }  */
+            
             
             
         }
