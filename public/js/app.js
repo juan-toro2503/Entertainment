@@ -115,7 +115,7 @@ class Libro extends Item{
     let imagen=document.getElementById("imagen_pelicula")
     let sipnosis=document.getElementById("sipnosis_pelicula")
     let duracion=document.getElementById("duracion_pelicula")
-    const movie={nombre:nombre.value,duracion:duracion.value,sipnosis:sipnosis.value,lanzamiento:año.value,imagen:imagen.value,genero:genero.value}
+    const movie={nombre:nombre.value,sipnosis:sipnosis.value,duracion:duracion.value,lanzamiento:año.value,imagen:imagen.value,genero:genero.value}
     fetch('http://localhost:3003/api/v1/peliculas/savePeliculas',{
         method:"POST",
         headers:{"Content-Type": "application/json",
