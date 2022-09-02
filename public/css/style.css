@@ -12,11 +12,11 @@ body{
 .nav{
     width: 100%;
     height: 100px;;
-    background-color: rgb(17, 39, 54);
+    background-color: rgba(17, 39, 54, 0);
     display: flex;
     
     padding:5px;
-    border: 2px solid rgb(191, 255, 0);
+    border-bottom: 2px solid rgb(191, 255, 0);
     box-shadow: 5px 5px 18px 5px rgba(191,255,0,0.73) ;
     border-radius:10px;
 }
@@ -37,7 +37,7 @@ body{
     font-size: 26px;
     height:45px;
     
-    background-color:rgb(17, 19, 53);
+    background-color:rgb(1, 38, 48);
     padding:4px;
     border-radius: 5px;;
     text-align: center;
@@ -142,10 +142,13 @@ body{
 }
 .description-item h3 {
     font-size:20px;
+    height:auto;
 
 }
 .description-item h4 {
     font-size:18px;
+    height:auto;
+    
 
 }
 

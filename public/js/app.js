@@ -115,7 +115,9 @@ class Libro extends Item{
     let imagen=document.getElementById("imagen_pelicula")
     let sipnosis=document.getElementById("sipnosis_pelicula")
     let duracion=document.getElementById("duracion_pelicula")
-    const movie={nombre:nombre.value,sipnosis:sipnosis.value,duracion:duracion.value,lanzamiento:año.value,imagen:imagen.value,genero:genero.value}
+    
+    const movie={nombrePeli:nombre.value,duracion:duracion.value,sipnosis:sipnosis.value,lanzamiento:año.value,imagen:imagen.value,genero:genero.value}
+    console.log(movie)
     fetch('http://localhost:3003/api/v1/peliculas/savePeliculas',{
         method:"POST",
         headers:{"Content-Type": "application/json",
@@ -124,6 +126,8 @@ class Libro extends Item{
     })
     .then(res=>res.json())
     .then(()=>alert("agregada la pelicula"))
+    setTimeout(()=>{window.location.reload()},2000)
+    
     
 
     
@@ -133,22 +137,46 @@ class Libro extends Item{
 } 
 //series 
 function agregarSeries(){
-    let nombre=document.getElementById("nombre_serie").value
-    let año=document.getElementById("año_serie").value
-    let genero=document.getElementById("genero_serie").value
-    let imagen=document.getElementById("imagen_serie").value
-    let sipnosis=document.getElementById("sipnosis_serie").value
-    let capitulos=document.getElementById("duracion_serie").value
+    let nombre=document.getElementById("nombre_serie")
+    let año=document.getElementById("año_serie")
+    let genero=document.getElementById("genero_serie")
+    let imagen=document.getElementById("imagen_serie")
+    let sipnosis=document.getElementById("sipnosis_serie")
+    let capitulos=document.getElementById("capitulos_serie")
+
+
+    const serie={nombreSerie:nombre.value,lanzamiento:año.value,genero:genero.value,imagen:imagen.value,sipnosis:sipnosis.value,capitulos:capitulos.value}
+    console.log(serie)
+    fetch('http://localhost:3003/api/v1/series/saveSerie',{
+        method:"POST",
+        headers:{"Content-Type": "application/json",
+    },
+    body: JSON.stringify(serie)
+    })
+    .then(res=>res.json())
+    .then(()=>alert("agregada la serie"))
+    setTimeout(()=>{window.location.reload()},2000)
     
 
 }
 // libros
 function agregarLibros(){
-    let nombre=document.getElementById("nombre_libro").value
-    let año=document.getElementById("año_libro").value
-    let genero=document.getElementById("genero_libro").value
-    let imagen=document.getElementById("imagen_libro").value
-    let autor=document.getElementById("autor_libro").value
+    let nombre=document.getElementById("nombre_libro")
+    let año=document.getElementById("año_libro")
+    let genero=document.getElementById("genero_libro")
+    let imagen=document.getElementById("imagen_libro")
+    let autor=document.getElementById("autor_libro")
+    const libro={nombreLibro:nombre.value,lanzamiento:año.value,imagen:imagen.value,genero:genero.value,autor:autor.value}
+    console.log(libro)
+    fetch('http://localhost:3003/api/v1/books/saveBooks',{
+        method:"POST",
+        headers:{"Content-Type": "application/json",
+    },
+    body: JSON.stringify(libro)
+    })
+    .then(res=>res.json())
+    .then(()=>alert("agregado el libro"))
+    setTimeout(()=>{window.location.reload()},1000)
     
     
 
@@ -180,7 +208,7 @@ function agregarLibros(){
                     peliculass+=`<div class="container-item">
                             <img class="img-item " src="${objeto[5]}" alt="">
                             <div class="description-item ">
-                                <h3>Nombre:${objeto[1]}</h3>
+                                <h3>Nombre:${objeto[1] }</h3>
                                 <h4>Sipnosis:${objeto[3]}</h4>
                                 <h4>Año:${objeto[4]}</h4>
                                 <h4>genero:${objeto[6]}</h4>
@@ -191,7 +219,7 @@ function agregarLibros(){
             
                     
         
-                    console.log(peliculas)
+                    console.log(objeto)
     }
     document.getElementById("contenedor_peliculas").innerHTML=peliculass
     });
@@ -272,7 +300,7 @@ function agregarLibros(){
         
                     console.log(objeto[5])
     }
-    document.getElementById("contenedor_libros").innerHTML=libross
+    document.getElementById("contenedor_libros").innerHTML=libross;
     });
 
  }
