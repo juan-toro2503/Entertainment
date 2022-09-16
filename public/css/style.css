@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace !important;
     
 }
 body{
@@ -45,7 +45,7 @@ body{
     
 }
 .nav-buscar{
-    width:200px;;
+    width:250px;;
     height:30px;
     font-size: 17px;
     background: transparent;
@@ -53,12 +53,63 @@ body{
     border-radius:5px;
     color: rgb(185, 252, 0);
 }
+.nav-buscar:focus~.container_search{
+    display: flex;
+    flex-wrap: wrap;
+}
 .logo-menu{
     font-size:28px;
     margin-right: 4px;
     margin-bottom:-8px; ;
     
     
+}
+.item-buscador{
+    width: 45%;
+    height: auto;
+    border: 2px solid rgb(0, 255, 213);
+    border-radius: 5px;
+    margin: 5px ;
+}
+.item-buscador:hover{
+    width: 45%;
+    height: auto;
+    border: 2px solid rgb(0, 255, 213);
+    border-radius: 5px;
+    margin: 5px ;
+    background-color: rgba(0, 247, 247, 0.507);
+    position: relative;
+    z-index: 2;
+}
+.title_img{
+
+    font-size: 12px;;
+    color:rgb(0, 255, 85);
+}
+#imagen{
+    width: 60px;
+    height: 100px;
+	margin: 0 auto;
+    border-radius: 2px;
+
+}
+.container_search{
+    display: none;
+    width:290px ;
+    height:auto;
+    max-height: 450px;
+    overflow: auto;
+    position: absolute;
+    margin-top:10px;
+    background-color: rgb(1, 38, 48);
+    border-bottom: 2px solid greenyellow;
+    border-left: 2px solid greenyellow;
+    border-right: 2px solid greenyellow;
+    border-bottom-left-radius: 10px;;
+    border-bottom-right-radius: 10px;;
+    border: 2px solid greenyellow;
+    border-radius: 10px;;
+    padding: 10px;;
 }
 .nav-ul-li:hover{
     color:rgb(191, 255, 0);
@@ -86,6 +137,7 @@ body{
     width: auto;
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
     height: auto;
     background-color:rgb(1, 47, 65);
     border: 6px solid rgb(255, 191, 0);
@@ -94,21 +146,24 @@ body{
     
 }
 .movies-title{
+    width: auto;
     background-color:rgb(191, 255, 0);
     border:2px solid ;
     border-radius:5px;
     height: 50px;
-    padding: 10px;
+    padding-bottom:10px;
     position: absolute;
     margin-top:-25px;
-    margin-left: 50px;
 }
+
+
 /* item de peliculas-libros-series */
 .container-item{
     margin: 30px;
     margin-left:13px;
     margin-right:13px;
     background-color: rgb(1, 47, 65);
+    border: 1px solid rgb(0, 247, 255);
     border-radius: 11px;
     transition: all 0.7s;
     width:190px;
@@ -122,7 +177,7 @@ body{
 .img-item{
     width:100%;
     height:100%;
-    background-color:rgba(255, 0, 0, 0.391);
+    
     position:relative;
    
     
@@ -133,8 +188,8 @@ body{
     width:100%;
     height:102%;
     padding:10px;
-    color: rgb(217, 255, 0);
-    background-color:rgba(3, 3, 3, 0.866);
+    color: rgb(255, 255, 255);
+    background-color:rgba(0, 9, 49, 0.866);
     transition: all .7s;
     
    
@@ -173,6 +228,7 @@ body{
     display:flex;
     flex-wrap: wrap;
     height: auto;
+    justify-content: center;
     background-color:rgb(1, 47, 65);
     border: 6px solid rgb(255, 0, 76);
     border-radius:15px;
@@ -182,6 +238,7 @@ body{
 }
 /* contenedor libros */
 .show-books{
+    justify-content: center;
     padding:0px;
     margin: 1%;
     margin-top:70px;
@@ -206,7 +263,7 @@ body{
     padding: 20px;
     
     border-top: 2px solid rgb(191, 255, 0);
-    box-shadow: 0px -15px 18px 0px rgba(255, 174, 0, 0.73) ;
+    box-shadow: 0px -15px 18px 0px rgba(217, 255, 0, 0.73) ;
 }
 .logo-footer{
     margin-left: 45%;

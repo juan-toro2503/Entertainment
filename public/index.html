@@ -16,7 +16,7 @@
                 <a href="../public/public/peliculas.html"><div class="nav-ul-li" ><ion-icon name="videocam-outline" class="logo-menu"></ion-icon></i>Peliculas</div></a>
                 <a href="../public/public/series.html"><div class="nav-ul-li" ><ion-icon name="tv-outline" class="logo-menu"></ion-icon>Series</div></a>
                 <a href="../public/public/libros.html"><div class="nav-ul-li" ><ion-icon name="library-outline" class="logo-menu"></ion-icon>Libros</div></a>
-                <a ><div class="nav-ul-li" ><ion-icon name="search-outline" class="logo-menu"></ion-icon><input class="nav-buscar" type="text"></div></a>
+                <a ><div class="nav-ul-li" ><ion-icon name="search-outline" class="logo-menu"></ion-icon><input id="input_searcher" class="nav-buscar" type="text"><div id="search_container" class="container_search"></div></div></a>
             </ul>
             <div class="nav-logo"><img src="../public/public/media/Entertainment (130 × 80 px).svg" alt="">  
 
@@ -25,8 +25,8 @@
         
     </header>
     <section>
-        <div class="show-movies">
-            <div class="movies-title"><h1>Peliculas nuevas</h1></div>
+        <div class="show-movies" >
+            <div class="movies-title"><h1>Peliculas</h1></div>
            <!--  items -->
             <div class="container-item">
                 <img class="img-item " src="https://play-lh.googleusercontent.com/6JZiNP78042HM0cOyGN5q3SEg8xnGrgds3I86YOW0zmOHpaT4OsJb1IhN_F7LhXf0rfAZANEwhLY6wcTLg=s256-rw" alt="">
@@ -89,6 +89,7 @@
     <script src="/js/app.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/buscador.js"></script>
     
 </body>
 </html>
